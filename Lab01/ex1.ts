@@ -13,3 +13,5 @@ class Person {
 }
 
 console.log(new Person("Đặng Phúc Nguyên", 22).getFullName());
+
+export { Person };
