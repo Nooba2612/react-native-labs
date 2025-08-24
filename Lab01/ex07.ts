@@ -16,5 +16,5 @@ class User {
 
 const user = new User("Nooba");
 console.log("User name: ", user.getName());
-user.setName("Dang Phuc Nguyen");
+user.setName("Dang Phuc Nguyen");w
 console.log("User name: ", user.getName());
