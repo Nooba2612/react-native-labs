@@ -12,6 +12,6 @@ class Person {
     }
 }
 
-console.log(new Person("Đặng Phúc Nguyên", 22).getFullName());
+console.log(new Person("Đặng Phúc Nguyên", 10).getFullName());
 
-export { Person };
+export = Person;

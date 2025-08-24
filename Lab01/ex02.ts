@@ -1,10 +1,11 @@
-import Person = require("./Ex1");
+import Person = require("./ex01");
 
 class Student extends Person {
     grade: string;
 
     constructor(name: string, age: number, grade: string) {
         super(name, number);
+        this.grade = grade;
     }
 
     getInfo() {
@@ -12,4 +13,4 @@ class Student extends Person {
     }
 }
 
-console.log(new Student("Đặng Phúc Nguyên", 22, "DHKTPM18B").getInfo());
+console.log(new Student("Than Hoang Thien Thien", 10, "DHKTPM18B").getInfo());
