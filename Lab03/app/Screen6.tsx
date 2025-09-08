@@ -3,12 +3,12 @@ import { Image } from "expo-image";
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import { Button, Linking, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
-import { RadioGroup } from "react-native-radio-buttons-group";
+import RadioGroup from "../components/RadioGroup";
 
 function Screen6() {
     const router = useRouter();
 
-    const [selectedId, setSelectedId] = useState();
+    const [selectedId, setSelectedId] = useState<string | undefined>();
 
     const radioButtons = [
         { id: "1", label: "Nam", value: "male" },
@@ -47,7 +47,7 @@ function Screen6() {
                             secureTextEntry
                         />
                         <Image
-                            source={require("../assets/images/black-eye-icon.png")}
+                            source={{uri:"https://raw.githubusercontent.com/Nooba2612/react-native-labs/master/Lab03/assets/images/black-eye-icon.png"}}
                             style={{ width: 50, height: 50 }}
                         />
                     </View>
@@ -58,10 +58,12 @@ function Screen6() {
                         />
                     </View>
                     <RadioGroup
-                        radioButtons={radioButtons}
-                        onPress={setSelectedId}
-                        selectedId={selectedId}
-                        layout="row"
+                      options={[
+                        { id: "1", label: "Nam", value: "male" },
+                        { id: "2", label: "Nữ", value: "female" },
+                      ]}
+                      selected={selectedId}
+                      onChange={setSelectedId}
                     />
                     <Pressable
                         style={({ pressed }) => [styles.button, { opacity: pressed ? 0.6 : 1 }]}

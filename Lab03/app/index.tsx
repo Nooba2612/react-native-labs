@@ -11,7 +11,7 @@ import Screen4 from "./Screen4";
 const App = () => {
     return (
         <SafeAreaView style={styles.mainScreen}>
-            <Screen4 />
+            <Screen6 />
         </SafeAreaView>
     );
 };
